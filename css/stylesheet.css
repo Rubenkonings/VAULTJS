@@ -1,0 +1,24 @@
+body
+{
+    background-color: aqua;
+}
+#code-container
+{
+    display: block;
+    background-color: blue;
+    width: 500px;
+    margin: 0 auto;
+    height: 500px;
+ 
+}
+.buttons
+{
+   
+    background-color: red;
+}
+#greenblock
+{
+    height: 50px;
+    background-color: green;
+    width: 50px;
+}
