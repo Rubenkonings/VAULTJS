@@ -11,11 +11,11 @@ var numberthree;
 
 var blink = setInterval(function blink(){ 
     intervalTimer++;
-    if (greenblock.style.visibility =='hidden') {
-        greenblock.style.visibility =='visible';
+    if (greenblock.style.visibility ='hidden') {
+        greenblock.style.visibility ='visible';
     }
     else {
-        greenblock.style.visibility =='hidden'
+        greenblock.style.visibility ='hidden'
     }
     if (intervaltimer==10) { 
         clearInterval(blink);        
