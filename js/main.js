@@ -9,20 +9,7 @@ var numberone;
 var numbertwo;
 var numberthree;
 
-var blink = setInterval(function blink(){ 
-    intervalTimer++;
-    if (greenblock.style.visibility ='hidden') {
-        greenblock.style.visibility ='visible';
-    }
-    else {
-        greenblock.style.visibility ='hidden'
-    }
-    if (intervaltimer==10) { 
-        clearInterval(blink);        
-    }
 
-
-},500)
 
 function getNumber(clickedbutton)
 {
@@ -47,18 +34,44 @@ else if (clickcounter== 3)
 
 if(clickcounter==3 )
 {    
+
+    disablebuttons();
+    console.log("dssdsd");
     if (numberone ==3 && numbertwo ==3&& numberthree==1 ) 
         {          
+            
             codecontainer.innerHTML="you are right"; 
-            blink();
+
+            
+            
+            var blink = setInterval(function blink(){ 
+
+                intervalTimer++;
+                
+                if (greenblock.style.visibility =='visible') {
+                    greenblock.style.visibility ='hidden';
+                }
+                else {
+                    greenblock.style.visibility ='visible'
+                }
+
+                if (intervaltimer==10) { 
+                    clearInterval(blink);        
+                }
+            
+            
+            },500)
+
+
         }else 
         {            
             codecontainer.innerHTML="you are wrong";           
-            disablebuttons();
+            
+            console.log("dssdsd");
         }
 
 }
-if (clickcounter ==4) 
+if (clickcounter ==3) 
 {
     numberone;
     numbertwo;
@@ -66,6 +79,7 @@ if (clickcounter ==4)
     codecontainer.innerHTML="";
     clickcounter  =0;
 }
+
 function disablebuttons(){
 for ( i = 0; i < buttons.length; i++) {    
     buttons[i].setAttribute('disabled', 'disabled');    
